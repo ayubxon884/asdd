@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Bosh sahifa {% endblock title %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        {{ user.username }}
+        <p><a href="{% url 'logout' %}">Chiqish</a></p>
+    {% endif %}
+{% endblock content %}
